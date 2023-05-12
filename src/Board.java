@@ -33,6 +33,6 @@ public class Board
     static void shoot(char letter, int numb)
     {
         int convertedLetter = Convert.letterToNumb(letter);
-        cells[convertedLetter][numb].setState(States.shoot);
+        cells[numb][convertedLetter].setState(States.shoot);
     }
 }

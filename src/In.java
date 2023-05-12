@@ -13,8 +13,8 @@ public class In
     }
     static void coords()
     {
-        char x = scanner.next().charAt(0);
-        int y = scanner.nextInt();
-        Board.shoot(x, y);
+        char y = scanner.next().charAt(0);
+        int x = scanner.nextInt();
+        Board.shoot(y, x);
     }
 }
