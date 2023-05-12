@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Convert
 {
-    static int lettersToNumbs(char letter)
+    static int letterToNumb(char letter)
     {
         Map<Character, Integer> values = new LinkedHashMap<>();
         for (int i = 65; i < 75; i++) {
@@ -11,7 +11,7 @@ public class Convert
         }
         return values.get(letter);
     }
-    static String numbsToLetters(int numb)
+    static String numbToLetter(int numb)
     {
         Map<Integer, Character> values = new LinkedHashMap<>();
         for (int i = 65; i < 75; i++)
