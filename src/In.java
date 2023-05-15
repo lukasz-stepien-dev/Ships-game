@@ -11,4 +11,10 @@ public class In
     {
         return scanner.nextInt();
     }
+    static void coords()
+    {
+        char y = scanner.next().charAt(0);
+        int x = scanner.nextInt();
+        Board.shoot(y, x);
+    }
 }

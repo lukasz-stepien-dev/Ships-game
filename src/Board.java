@@ -30,4 +30,9 @@ public class Board
             out.print("\n");
         }
     }
+    static void shoot(char letter, int numb)
+    {
+        int convertedLetter = Convert.letterToNumb(letter);
+        cells[numb][convertedLetter].setState(States.shoot);
+    }
 }

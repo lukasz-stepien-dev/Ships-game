@@ -7,7 +7,8 @@ public class Main
         while (true)
         {
             Board.print();
-            break;
+            In.coords();
+            Console.clear();
         }
     }
 }
