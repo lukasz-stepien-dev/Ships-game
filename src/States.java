@@ -4,4 +4,6 @@ public class States
 {
     static String empty = " - ";
     static String shoot = " O ";
+    static String down = " + ";
+    static String sunken = " X ";
 }
