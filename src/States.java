@@ -6,4 +6,5 @@ public class States
     static String shoot = " O ";
     static String down = " + ";
     static String sunken = " X ";
+    static String ship = " # ";
 }
