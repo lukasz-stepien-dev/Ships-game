@@ -3,12 +3,11 @@ public class Main
     public static void main(String[] args)
     {
         Board.setEmptyCell();
+        Mode.settingShips();
         // Game loop
         while (true)
         {
-            Board.print();
-            In.coords();
-            Console.clear();
+            Mode.shooting();
         }
     }
 }

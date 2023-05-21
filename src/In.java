@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.Scanner;
 
 public class In
@@ -11,10 +12,12 @@ public class In
     {
         return scanner.nextInt();
     }
-    static void coords()
+    static void shootCoords()
     {
-        char y = scanner.next().charAt(0);
-        int x = scanner.nextInt();
-        Board.shoot(y, x);
+        Board.shoot(nextChar(), nextInt());
+    }
+    static void shipCoords()
+    {
+        Board.setShips(nextChar(), nextInt(), nextChar(), nextChar());
     }
 }

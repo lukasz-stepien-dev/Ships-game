@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 import static java.lang.System.out;
 
 public class Board
@@ -33,6 +35,21 @@ public class Board
     static void shoot(char letter, int numb)
     {
         int convertedLetter = Convert.letterToNumb(letter);
-        cells[numb][convertedLetter].setState(States.shoot);
+        Cell cell = cells[numb][convertedLetter];
+
+        if (Objects.equals(cell.getState(), States.empty))
+        {
+            cell.setState(States.shoot);
+        }
+        else if (Objects.equals(cell.getState(), States.ship))
+        {
+            cell.setState(States.down);
+        }
+    }
+
+    static void setShips(char letter, int numb, char ship, char direction)
+    {
+        int convertedLetter = Convert.letterToNumb(letter);
+        cells[numb][convertedLetter].setState(States.ship);
     }
 }
