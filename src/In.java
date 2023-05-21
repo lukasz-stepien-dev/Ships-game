@@ -16,14 +16,13 @@ public class In
     {
         Board.shoot(nextChar(), nextInt());
     }
-    static void shipCoords() {
+    static char shipCoords() {
         char isLast;
-        do {
-            char letter = nextChar();
-            int numb = nextInt();
-            isLast = nextChar();
-            Board.setShips(letter, numb/*, nextChar()*/);
-        } while (isLast == 'Y');
+        char letter = nextChar();
+        int numb = nextInt();
+        isLast = nextChar();
+        Board.setShips(letter, numb);
+        return isLast;
 
     }
 }

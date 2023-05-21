@@ -1,22 +1,25 @@
 public class Mode
 {
-    static void settingShips()
+    static char settingShips()
     {
         Board.print();
         Board.info();
-        In.shipCoords();
+        char isLast = In.shipCoords();
         Console.clear();
+        return isLast;
     }
-    static void settingShips(boolean checked)
+    static char settingShips(boolean checked)
     {
         Board.print();
         Board.checked();
-        In.shipCoords();
+        char isLast = In.shipCoords();
         Console.clear();
+        return isLast;
     }
     static void shooting()
     {
         Board.print();
+        Board.infoShoot();
         In.shootCoords();
         Console.clear();
     }

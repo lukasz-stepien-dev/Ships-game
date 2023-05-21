@@ -3,9 +3,11 @@ public class Main
     public static void main(String[] args)
     {
         Board.setEmptyCell();
-        for (int i = 0; i < 10; i++) {
-            Mode.settingShips();
-        }
+        char isLast;
+        do {
+            isLast = Mode.settingShips();
+        } while (isLast != 'Y');
+
         // Game loop
         while (true)
         {

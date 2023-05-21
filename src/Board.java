@@ -35,12 +35,18 @@ public class Board
 
     static void info()
     {
-        out.println("Podaj kordynaty np. \"A 0\"");
+        out.println("[Ustawianie statku] Podaj kordynaty np. \"A 0 (Y - po tym ustawieniu chce zakonczyc, N - chce dalej)\"");
     }
 
     static void checked()
     {
-        out.println("To miejsce jest juz zajete!");
+        out.println("[Ustawianie statku] To miejsce jest juz zajete!");
+        out.println("[Ustawianie statku] Podaj kordynaty np. \"A 0 (Y - po tym ustawieniu chce zakonczyc, N - chce dalej)\"");
+    }
+
+    static void infoShoot()
+    {
+        out.println("[Strzelanie] Podaj kordynaty np. \"A 0\"");
     }
 
     static void shoot(char letter, int numb)
@@ -58,7 +64,7 @@ public class Board
         }
     }
 
-    static void setShips(char letter, int numb/*, char ship, char direction*/)
+    static void setShips(char letter, int numb)
     {
         boolean checked = true;
         int convertedLetter = Convert.letterToNumb(letter);
