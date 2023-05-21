@@ -32,6 +32,17 @@ public class Board
             out.print("\n");
         }
     }
+
+    static void info()
+    {
+        out.println("Podaj kordynaty np. \"A 0\"");
+    }
+
+    static void checked()
+    {
+        out.println("To miejsce jest juz zajete!");
+    }
+
     static void shoot(char letter, int numb)
     {
         int convertedLetter = Convert.letterToNumb(letter);
@@ -47,9 +58,18 @@ public class Board
         }
     }
 
-    static void setShips(char letter, int numb, char ship, char direction)
+    static void setShips(char letter, int numb/*, char ship, char direction*/)
     {
+        boolean checked = true;
         int convertedLetter = Convert.letterToNumb(letter);
-        cells[numb][convertedLetter].setState(States.ship);
+        if (Objects.equals(cells[numb][convertedLetter].getState(), States.empty))
+        {
+            cells[numb][convertedLetter].setState(States.ship);
+        }
+        else
+        {
+            Mode.settingShips(checked);
+        }
     }
+
 }
